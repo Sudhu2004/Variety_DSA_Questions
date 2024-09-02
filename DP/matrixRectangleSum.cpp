@@ -1,7 +1,7 @@
 //{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
-
+  
 // } Driver Code Ends
 
 // https://practice.geeksforgeeks.org/contest/gfg-weekly-170-rated-contest/problems
