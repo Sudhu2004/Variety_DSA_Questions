@@ -8,6 +8,8 @@ vector<int> depth(200001);
 vector<int> ans(200001);
 vector<int> adj[200001];
 
+
+// This function will calculate the max depth leaf away from the node
 void eval_depth(int node, int parent) {
     
     int curr_depth = 0;
@@ -21,6 +23,7 @@ void eval_depth(int node, int parent) {
     depth[node] = curr_depth;
 }
 
+// This will update the answer
 void solve(int node, int parent, int temp_ans) {
     vector<int> prefix, suffix;
 
@@ -30,6 +33,8 @@ void solve(int node, int parent, int temp_ans) {
             suffix.push_back(depth[it]);
         }
     }
+    // The prefix and suffix arrays represents 
+    // the maximum distance accross the all the edges from `node`
 
     int n = prefix.size();
     for(int i=1; i < n ;i++) {
@@ -50,7 +55,7 @@ void solve(int node, int parent, int temp_ans) {
         solve(it, node, parentSum);
         c_no++;
     }
-
+    // the temp ans is maximum distance the parent has on its side
     ans[node] = 1 + max(temp_ans, prefix.empty()?-1: prefix.back());
 }
 int main() {

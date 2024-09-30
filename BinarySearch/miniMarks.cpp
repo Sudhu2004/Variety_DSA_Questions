@@ -21,7 +21,7 @@ ll exp(ll b, ll p) {
 
     while(p) {
         if(p&1) {
-            ans =(ans * b)%MOD;a
+            ans =(ans * b)%MOD;
         }
         b = (b * b) % MOD;
         p /= 2; 
