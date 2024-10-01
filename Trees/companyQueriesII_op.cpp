@@ -58,6 +58,7 @@ int LCA(int u, int v) {
     u = jumps(u, lvl[u] - lvl[v]);
 
     if( u == v) return u;
+    
     for(int i=19; i>=0 ;i--) {
         if(dp[u][i] != dp[v][i]) {
             u = dp[u][i];
