@@ -36,7 +36,7 @@ void dfs(int node, int parent) {
 
 int jumps(int node, int reqjumps) {
     
-    // recursive
+    // Iterative
     for(int i=19;i>=0 ;i--) {
         if(node == -1 || reqjumps == 0) break;
 
