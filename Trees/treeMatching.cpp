@@ -35,7 +35,7 @@ void solve(int node, int parent,vector<int> adj[], vector<vector<int>>& dp) {
     }
 
     int c_no = 0;
-    dp[node][0] = suffix[0]; // if the curr edges is not picked
+    dp[node][0] = suffix[0]; // if the curr node is not picked
     for(auto it: adj[node]) {
         if(it == parent) continue;
 
